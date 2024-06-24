@@ -8,9 +8,9 @@ class ApplicationError extends Error {
       error: {
         name: this.name,
         message: this.message,
-        details: this.details,
+        details: this.details
       }
-    }
+    };
   }
 }
 

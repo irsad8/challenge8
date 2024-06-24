@@ -1,22 +1,19 @@
 'use strict';
 
 module.exports = {
-  async up (queryInterface, Sequelize) {
-    const names = [
-      "CUSTOMER",
-      "ADMIN",
-    ]
+  async up(queryInterface, Sequelize) {
+    const names = ['CUSTOMER', 'ADMIN'];
     const timestamp = new Date();
     const records = names.map((name) => ({
       name,
       createdAt: timestamp,
-      updatedAt: timestamp,
-    }))
+      updatedAt: timestamp
+    }));
 
     await queryInterface.bulkInsert('Roles', records, {});
   },
 
-  async down (queryInterface, Sequelize) {
+  async down(queryInterface, Sequelize) {
     await queryInterface.bulkDelete('Roles', null, {});
   }
 };

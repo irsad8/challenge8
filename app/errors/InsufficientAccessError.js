@@ -1,8 +1,8 @@
-const ApplicationError = require("./ApplicationError");
+const ApplicationError = require('./ApplicationError');
 
 class InsufficientAccessError extends ApplicationError {
   constructor(role) {
-    super("Access forbidden!");
+    super('Access forbidden!');
     this.role = role;
   }
 
@@ -10,7 +10,7 @@ class InsufficientAccessError extends ApplicationError {
     return {
       role: this.role,
       reason: `${this.role} is not allowed to perform this operation.`
-    }
+    };
   }
 }
 

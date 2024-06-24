@@ -24,10 +24,10 @@ module.exports = {
         type: Sequelize.INTEGER,
         references: {
           model: {
-            tableName: "Roles",
+            tableName: 'Roles'
           },
-          key: "id",
-        },
+          key: 'id'
+        }
       },
       createdAt: {
         allowNull: false,
